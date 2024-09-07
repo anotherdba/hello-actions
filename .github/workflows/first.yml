@@ -1,30 +1,37 @@
-name: first
+name: complex
 
 on: push
 
 jobs:
-    job1:
+    ubuntu:
         name: First Job
         runs-on: ubuntu-latest
         steps:
             - name: Step one
               uses: actions/checkout@v2
             - name: Step two
-              run: env | sort
-    job2:
+              run: date
+    windows:
         name: Second Job
         runs-on: windows-latest
         steps:
             - name: Step one
               uses: actions/checkout@v2
             - name: Step two
-              run: "get-childItem Env: | sort-object Name"
-    job3:
-        name: Second Job
+              run: date
+    macos:
+        name: Third Job
         runs-on: macos-latest
         steps:
             - name: Step one
               uses: actions/checkout@v2
             - name: Step two
-              run: env | sort
+              run: date
+    depends:
+	    needs: [ubuntu, windows, macos]
+        runs-on: macos-latest
+        steps:
+        - run: date
+         
+  
 
