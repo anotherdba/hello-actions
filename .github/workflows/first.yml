@@ -27,11 +27,7 @@ jobs:
               uses: actions/checkout@v2
             - name: Step two
               run: date
-    depends:
-	needs: [ubuntu, windows, macos]
-          runs-on: macos-latest
-          steps:
-          - run: date
+ 
          
   
 
