@@ -28,7 +28,7 @@ jobs:
             - name: Step two
               run: date
     depends:
-	    needs: [ubuntu, windows, macos]
+	needs: [ubuntu, windows, macos]
         runs-on: macos-latest
         steps:
         - run: date
