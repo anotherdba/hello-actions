@@ -10,7 +10,6 @@ jobs:
     - name: step one
       uses: actions/checkout@v4
     - name: step two
-      uses: actions/checkout@v4
       run: env | sort
   job2:
     name: Second job
@@ -19,5 +18,4 @@ jobs:
     - name: step one
       uses: actions/checkout@v4
     - name: step two
-      uses: actions/checkout@v4
       run: "Git-ChildItem Env: | sort-object Name"
