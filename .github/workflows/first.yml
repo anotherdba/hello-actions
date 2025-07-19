@@ -18,4 +18,4 @@ jobs:
     - name: step one
       uses: actions/checkout@v4
     - name: step two
-      run: "Git-ChildItem Env: | sort-object Name"
+      run: "Get-ChildItem Env: | sort-object Name"
